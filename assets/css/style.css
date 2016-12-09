@@ -1,0 +1,179 @@
+@font-face{
+ font-family:"digital-clock-font";
+ src: url("../font/digital-7 (mono).ttf");
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  background-color: black;
+  color: white;
+
+}
+
+.wweTitantron {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: -100;
+}
+
+.header {
+    position: absolute;
+/*    top: 20px;
+    left: 542px;*/
+    top: 8px;
+    left: 643px;
+    /*font-family: 'Press Start 2P', cursive;*/
+	font-family: 'Share Tech', sans-serif;
+    /*font-size: 40px;*/
+    font-size: 60px;
+    margin-top: 0px;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+	color: white;
+	/*font-family: 'Share Tech', sans-serif;*/
+    font-family: 'Press Start 2P', cursive;
+}
+
+.h1, h1 {
+	/*font-size: 30px;*/
+	font-size: 20px;
+	margin-top: 0px;
+}
+
+.h2, h2 {
+	font-size: 12px;
+	margin-top: 0px;
+}
+
+#game-container {
+	position: absolute;
+    top: 140px;
+    left: 422px;
+    width: 810px;
+    height: 460px;
+}
+
+.trivia {
+	position: absolute;
+	padding: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+}
+
+.trivia-choices {
+	position: absolute;
+    top: 230px;
+    left: 0;
+    width: 100%;
+    height: 50%;
+}
+
+.giphyImg {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.choice {
+    cursor: pointer;
+    height: 40px;
+    width: 400px;
+    padding-top: 10px;
+    padding-left: 15px;
+    color: white;
+    /*font-family: 'Share Tech', sans-serif;*/
+    font-family: 'Press Start 2P', cursive;
+    /*font-size: 20px;*/
+    font-size: 12px;
+    margin: 15px;
+    background-color: #D44B47;
+    border: 2px solid white;
+    border-radius: 16px;
+}
+
+.btn-start, .btn-restart {
+	
+	position: absolute;
+    top: -48px;
+    left: 312px;
+
+}
+
+#left-panel {
+	position: absolute;
+    top: 213px;
+    left: 53px;
+}
+
+#right-panel {
+	position: absolute;
+	top: 210px;
+    left: 1339px;
+}
+
+.cdclock {
+	position: absolute;
+    top: 610px;
+    left: 800px;
+    width: 53px;
+    height: 36px;
+ }
+
+ .countdownsm {
+	position: absolute;
+	font-size: 26px;
+	font-family: "Orbitron", sans-serif;
+	font-family: "digital-clock-font";
+	color: rgb(255, 193, 25);
+}
+
+.cdleft {
+	position: absolute;
+	top: 0px;
+    left: 0px;	
+}
+
+.cdcenter {
+	position: absolute;
+	top: 0px;
+    left: 4px;	
+}
+
+.cdright {
+	position: absolute;
+	top: 0px;
+    left: 0px;	
+}
+
+.cdpanel {
+	position: absolute;
+    width: 262px;
+    height: 464px;
+}
+
+.countdown {
+	font-size: 120px;
+	font-family: "Orbitron", sans-serif;
+	font-family: "digital-clock-font";
+	color: rgb(255, 193, 25);
+}
+
+@keyframes flash {
+    from {opacity: 1;}
+    to {opacity: 0;}
+ }
+
+.results {
+  animation-name: flash;
+  animation-iteration-count: 3;
+  animation-duration: .5s;
+}
+
+
