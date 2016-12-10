@@ -6,7 +6,7 @@
 //		a. Show message alerting user if right or wrong answer or if time-expired; Keep track of right or wrong answers and unanswered (time-expired)
 //		b. always provide the right answer with a description
 //		c. display graphic related to question and answer
-// 5.  Proceed to next question and repeat steps 2 - 4 for desired amount of questions questions
+// 5.  Proceed to next question and repeat steps 2 - 4 for desired amount of questions 
 // 6.  At end of game: 
 //		a. Display results: Correct, Wrong, Unanswered questions
 //		b. Button to play again
@@ -46,7 +46,7 @@ $(document).ready(function() {
 					question2 = {question: "Who holds the record for the longest WWE Championship reign?",
 					choiceA: "a. The Ultimate Warrior", choiceB: "b. Bob Backlund", choiceC: "c. Hulk Hogan", choiceD: "d. Bruno Sammartino", correctChoice: "d", 
 					desc: "Bruno Sammartino - 7 years, 8 months, and one day, to be exact.",
-					searchkey: "Bruno Sammartino wwf"},
+					searchkey: "Bruno Sammartino wwe"},
 					question3 = {question: "To whom did the Honky Tonk Man lose his Intercontinental Championship at SummerSlam 1988 in only 31 seconds?",
 					choiceA: "a. The Ultimate Warrior", choiceB: "b. Brutus the Barber Beefcake", choiceC: "c. Hulk Hogan", choiceD: "d. Macho Man", correctChoice: "a", 
 					desc: "The Ultimate Warrior - That the Ultimate Warrior would be the Honky Tonk Man's opponent was not announced in advance of the event.",
@@ -182,7 +182,7 @@ $(document).ready(function() {
 					question36 = {question: "What was the first name of Bruno Sammartino's son, who wrestled at the inaugural Wrestlemania?",
 					choiceA: "a. David", choiceB: "b. Luke", choiceC: "c. Paul", choiceD: "d. Chris", correctChoice: "a", 
 					desc: "David - David Sammartino was fired from the WWF after he was arrested for punching a fan who spat at him.",
-					searchkey: "Bruno Sammartino wwf"},
+					searchkey: "Bruno Sammartino wwe"},
 					question37 = {question: "The Executioner, who wrestled the first match at the first Wrestlemania against Tito Santana, more famously wrestled under what name?",
 					choiceA: "a. 'Playboy' Buddy Rose", choiceB: "b. The Undertaker", choiceC: "c. Big John Studd", choiceD: "d. King Kong Bundy", correctChoice: "a", 
 					desc: "'Playboy' Buddy Rose - Rose died of natural causes in 2009, being morbidly obese at the time.",
@@ -348,7 +348,24 @@ $(document).ready(function() {
 				$(".trivia-choices").html($gifImg);		
 		    });
 
+		    this.move();
 
+		},
+
+		move: function() {
+		    // var elem =$("#myBar"); 
+		    var width = 1;
+		    $(".progressBar").css({"display": "inline-block"}); 
+		    var id = setInterval(frame, 100);
+		    function frame() {
+		        if (width >= 100) {
+		            clearInterval(id);
+		            $(".progressBar").css({"display": "none"});
+		        } else {
+		            width += 1; 
+		            $("#myBar").css({"width": width + "%"}); 
+		        }
+		    }
 		},
 
 		gameOver: function() {
@@ -441,11 +458,11 @@ $(document).on("click", ".choice", function() {
 
 	if (curChoice === triviagame.curCorrectChoice) {
 
-		triviagame.message = $("<h2>").text("Correct!!!").addClass("results");
+		triviagame.message = $("<h2>").text("Correct!!!").addClass("results correct");
 
 		triviagame.correct++;		
 	} else {
-		triviagame.message = $("<h2>").text("Wrong!!!").addClass("results");
+		triviagame.message = $("<h2>").text("Wrong!!!").addClass("results wrong");
 
 		triviagame.wrong++;
 	}
