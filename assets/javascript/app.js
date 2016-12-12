@@ -319,7 +319,8 @@ $(document).ready(function() {
 
 			this.timedout++;
 
-			this.message = "<h2>You've been counted out!!</h2>";
+			this.message = $("<h2>").text("You've been counted out!!").addClass("results timesup");
+
 			this.displayAnswer();
 		},
 
@@ -361,6 +362,7 @@ $(document).ready(function() {
 		        if (width >= 100) {
 		            clearInterval(id);
 		            $(".progressBar").css({"display": "none"});
+		            $("#myBar").css({"width": "0%"}); 
 		        } else {
 		            width += 1; 
 		            $("#myBar").css({"width": width + "%"}); 

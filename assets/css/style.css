@@ -98,6 +98,10 @@ body {
     border-radius: 16px;
 }
 
+.choice:hover {
+    background-color: red;
+}
+
 .btn-start, .btn-restart {
 	
 	position: absolute;
@@ -182,6 +186,10 @@ body {
 
 .wrong {
     color: red;
+}
+
+.timesup {
+    color: rgb(255, 193, 25);
 }
 
 #myProgress {
