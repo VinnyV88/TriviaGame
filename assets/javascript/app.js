@@ -502,7 +502,7 @@ $(document).ready(function() {
 
 			var type = 	triviagame.parseSubject();
 
-		    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + type + "&api_key=dc6zaTOxFJmzC&limit=2&offset=&rating=&lang=&fmt=json";
+		    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + type + "&api_key=dc6zaTOxFJmzC&limit=2&offset=&rating=&lang=&fmt=json";
 
 		    var igiphy = Math.floor(Math.random() * 2)
 
